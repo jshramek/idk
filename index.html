@@ -5,7 +5,7 @@
     <style>
         body {
             background-color: #000000;
-            color: #ffaa00; /* Neon Orange Donut */
+            color: #ffaa00; /* Glowing Orange Donut */
             font-family: monospace;
             font-size: 11px;
             line-height: 8px;
@@ -18,13 +18,16 @@
             overflow: hidden;
         }
         #server-name {
+            color: #ffffff;
             font-size: 24px;
             margin-bottom: 20px;
             font-family: 'Arial', sans-serif;
             font-weight: bold;
+            letter-spacing: 2px;
         }
         pre {
             background: transparent;
+            margin: 0;
         }
     </style>
 </head>
@@ -34,7 +37,6 @@
     <pre id="donut"></pre>
 
     <script>
-        // Andy Sloane's Donut Mathematical Animation Code
         const donutContainer = document.getElementById('donut');
         let A = 0, B = 0;
 
@@ -74,11 +76,6 @@
             requestAnimationFrame(renderFrame);
         }
         renderFrame();
-
-        // GMod Engine Integration Hooks
-        function GameDetails(serverName, serverURL, mapName, maxPlayers, steamID, gamemode) {
-            document.getElementById('server-name').innerText = serverName.toUpperCase();
-        }
     </script>
 </body>
 </html>
